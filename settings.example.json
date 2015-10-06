@@ -1,0 +1,8 @@
+{
+  "public": {
+    "recordsPerPage" : "10"
+  },
+  "private": {
+    "access-key" : "132456789"
+  }
+}

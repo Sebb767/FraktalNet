@@ -28,3 +28,6 @@ node_modules
 
 # WebStorm Project
 .idea
+
+# our private app settings
+settings.json
