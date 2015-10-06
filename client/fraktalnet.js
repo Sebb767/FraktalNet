@@ -1,10 +1,12 @@
 if (Meteor.isClient) {
+    Meteor.subscribe("Images");
 
 
-}
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
+    Template.home.helpers({
+    'images': function() {
+      return Images.find();
+    }
   });
+
 }
+
