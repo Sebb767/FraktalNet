@@ -7,8 +7,8 @@ Images = new FS.Collection("Images", {
             contentTypes: ['image/*']
         },
         onInvalid: function(message) {
-            if (Meteor.isClient)
-                toastr["error"]("Error: "+message, "Image upload failed.");
+            //if (Meteor.isClient)
+                //toastr["error"]("Error: "+message, "Image upload failed.");
         }
     }
 });
@@ -22,6 +22,7 @@ Images.allow({
 
 if(Meteor.isClient)
 {
+
     Template.dropzone.events({
         'dropped #dropzone': function(e) {
             FS.Utility.eachFile(e, function(file) {
