@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-    Meteor.subscribe("Images");
+    //Meteor.subscribe("Images");
 
 
     Template.home.helpers({

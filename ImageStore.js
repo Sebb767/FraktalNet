@@ -1,3 +1,4 @@
+FS.debug = true;
 var imageStore = new FS.Store.GridFS("images");
 
 Images = new FS.Collection("Images", {
@@ -7,11 +8,12 @@ Images = new FS.Collection("Images", {
             contentTypes: ['image/*']
         },
         onInvalid: function(message) {
-            //if (Meteor.isClient)
-                //toastr["error"]("Error: "+message, "Image upload failed.");
+            if (Meteor.isClient)
+                toastr["error"]("Error: "+message, "Image upload failed.");
         }
     }
 });
+
 
 // Allow rules
 Images.allow({
@@ -22,6 +24,7 @@ Images.allow({
 
 if(Meteor.isClient)
 {
+    Meteor.subscribe("Images", 5);
 
     Template.dropzone.events({
         'dropped #dropzone': function(e) {
@@ -36,6 +39,12 @@ if(Meteor.isClient)
                     }
                 });
             });
+        }
+    });
+
+    Template.home.helpers({
+        'images': function() {
+            return Images.find();
         }
     });
 }
