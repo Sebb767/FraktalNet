@@ -3,6 +3,6 @@
     "recordsPerPage" : "10"
   },
   "private": {
-    "access-key" : "132456789"
+    "header-key" : "132456789"
   }
 }
