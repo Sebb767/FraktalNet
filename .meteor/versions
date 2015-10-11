@@ -42,6 +42,7 @@ ejson@1.0.7
 es5-shim@4.1.13
 fastclick@1.0.7
 fezvrasta:bootstrap-material-design@0.3.0
+gadicohen:headers@0.0.30
 geojson-utils@1.0.4
 hot-code-push@1.0.0
 html-tools@1.0.5
@@ -54,6 +55,7 @@ livedata@1.0.15
 logging@1.0.8
 meteor@1.1.9
 meteor-base@1.0.1
+meteorhacks:inject-initial@1.0.2
 minifiers@1.1.7
 minimongo@1.0.10
 mobile-experience@1.0.1
