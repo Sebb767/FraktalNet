@@ -1,10 +1,10 @@
 if (Meteor.isClient) {
-    //Meteor.subscribe("Images");
+    Meteor.subscribe("Images", 5);
 
 
     Template.home.helpers({
     'images': function() {
-      return Images.find();
+      return Images.files.find();
     }
   });
 
